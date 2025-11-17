@@ -8,9 +8,36 @@ Testapp Detail Page
 {% comment %} enjecting block in block {% endcomment %}
 {% block content %}
 <h1>Testapp | test app Detail Page</h1>
-
+{% comment %} 
 <h3>{{seat.name}}</h3>
-<p>{{seat.description}}</p>
+<p>{{seat.description}}</p> {% endcomment %}
+
+{% comment %} TASK:  make card using tailwindcss ny retrieving data from backend to frontend {% endcomment %}
+
+<div class="flex justify-center items-center min-h-screen bg-gray-600 ">
+    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <img class="w-full" src="{{seat.image.url}}" alt="Sunset in the mountains">
+        <div class="px-6 py-4 bg-gray-700">
+          <div class="font-bold text-xl mb-2">Rs.{{seat.price}}</div>
+          <p class="text-shadow-indigo-200 text-base">
+            {{seat.description}}
+          </p>
+        </div>
+    </div>
+</div>
+
+{% comment %} <div class="flex justify-center items-center min-h-screen bg-gray-600 ">
+    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <img class="w-full" src="{{seat.image.url}}" alt="Sunset in the mountains">
+        <div class="px-6 py-4 bg-gray-700">
+          <div class="font-bold text-xl mb-2">{{seat.price}}</div>
+          <p class="text-shadow-indigo-200 text-base">
+            {{seat.description}}
+          </p>
+        </div>
+    </div>
+</div> {% endcomment %}
+
 
 {% endblock %} 
 
