@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Testapp Detail Page
+{% endblock %}
+
+
+{% comment %} enjecting block in block {% endcomment %}
+{% block content %}
+<h1>Testapp | test app Detail Page</h1>
+
+<h3>{{seat.name}}</h3>
+<p>{{seat.description}}</p>
+
+{% endblock %} 
+
